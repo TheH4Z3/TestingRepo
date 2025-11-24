@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="API Smoke Tests" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-11-24T04:49:25" hostname="ROOT" time="11.972">
+  <properties/>
+  <testcase name="GET booking id retrieves the created booking" classname="API Smoke Tests" time="11.972">
+    <failure message="org.opentest4j.AssertionFailedError: null" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: null
+	at app//net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:39)
+	at app//net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:33)
+	at app//net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at app//com.restful.booker.stepdefinitions.SmokeStepDefinitions.theResponseShouldMatchTheCreatedBookingDetails(SmokeStepDefinitions.java:105)
+	at ✽.the response should match the created booking details(file:///C:/Users/VLADIMIR%20IGLESIAS/Desktop/RestfulBooker/src/test/resources/features/smoke/ping_auth_booking_smoke.feature:30)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@BookingGet
+Scenario: GET booking id retrieves the created booking      ?[90m# src/test/resources/features/smoke/ping_auth_booking_smoke.feature:26?[0m
+  ?[32mGiven ?[0m?[32mI created a booking ID?[0m                              ?[90m# com.restful.booker.stepdefinitions.SmokeStepDefinitions.iCreatedABookingID()?[0m
+Request method:	GET
+Request URI:	https://restful-booker.herokuapp.com/ping
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 201 Created
+Content-Length: 7
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 24 Nov 2025 04:49:33 GMT
+Etag: W/"7-rM9AyJuqT6iOan/xHh+AW+7K/T8"
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=B0UvSKRk0LAq0NTIfJ0Pr9H0r1qU1xUQESsv0VnbhTc%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1763959773"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=B0UvSKRk0LAq0NTIfJ0Pr9H0r1qU1xUQESsv0VnbhTc%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1763959773"
+Server: Heroku
+Via: 1.1 heroku-router
+X-Powered-By: Express
+
+Created
+Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Brenton",
+    "lastname": "Wunsch",
+    "totalprice": "889",
+    "depositpaid": "false",
+    "bookingdates": {
+        "checkin": "2025-12-11",
+        "checkout": "2025-12-11"
+    },
+    "additionalneeds": "Soluta commodi sed."
+}
+HTTP/1.1 200 OK
+Content-Length: 212
+Content-Type: application/json; charset=utf-8
+Date: Mon, 24 Nov 2025 04:49:35 GMT
+Etag: W/"d4-4VybxeM2rrQFRF8F14ftUHXxrxQ"
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=jla2xfkrdvUDruHVl%2Fbe3gEoS%2B0ETRg%2F2x3ulRvDwOA%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1763959775"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=jla2xfkrdvUDruHVl%2Fbe3gEoS%2B0ETRg%2F2x3ulRvDwOA%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1763959775"
+Server: Heroku
+Via: 1.1 heroku-router
+X-Powered-By: Express
+
+{
+    "bookingid": 4502,
+    "booking": {
+        "firstname": "Brenton",
+        "lastname": "Wunsch",
+        "totalprice": 889,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2025-12-11",
+            "checkout": "2025-12-11"
+        },
+        "additionalneeds": "Soluta commodi sed."
+    }
+}
+Request method:	GET
+Request URI:	https://restful-booker.herokuapp.com/booking/4502
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Length: 183
+Content-Type: application/json; charset=utf-8
+Date: Mon, 24 Nov 2025 04:49:36 GMT
+Etag: W/"b7-mam2nScAYVc6or5XKfkO/LzWxQo"
+Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=lO4PYJyKrp4J3dI9u8QtYCB%2Fpggkp1GTY7f%2BurfuikQ%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1763959776"}],"max_age":3600}
+Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=lO4PYJyKrp4J3dI9u8QtYCB%2Fpggkp1GTY7f%2BurfuikQ%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1763959776"
+Server: Heroku
+Via: 1.1 heroku-router
+X-Powered-By: Express
+
+{
+    "firstname": "Brenton",
+    "lastname": "Wunsch",
+    "totalprice": 889,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2025-12-11",
+        "checkout": "2025-12-11"
+    },
+    "additionalneeds": "Soluta commodi sed."
+}
+  ?[32mWhen ?[0m?[32mI retrieve the booking by ID?[0m                         ?[90m# com.restful.booker.stepdefinitions.SmokeStepDefinitions.iRetrieveTheBookingByID()?[0m
+  ?[32mThen ?[0m?[32mthe response status should be ?[0m?[32m?[1m200?[0m                    ?[90m# com.restful.booker.stepdefinitions.SmokeStepDefinitions.theResponseStatusShouldBe(int)?[0m
+EXPECTED BOOKING = {
+  "firstname" : "Lieselotte",
+  "lastname" : "Glover",
+  "totalprice" : "893",
+  "depositpaid" : "true",
+  "bookingdates" : {
+    "checkin" : "2025-11-26",
+    "checkout" : "2025-11-30"
+  },
+  "additionalneeds" : "Est id ipsum sunt."
+}
+BOOKING RESPONSE = {firstname=Brenton, lastname=Wunsch, totalprice=889, depositpaid=true, bookingdates={checkin=2025-12-11, checkout=2025-12-11}, additionalneeds=Soluta commodi sed.}
+  ?[31mAnd ?[0m?[31mthe response should match the created booking details?[0m ?[90m# com.restful.booker.stepdefinitions.SmokeStepDefinitions.theResponseShouldMatchTheCreatedBookingDetails()?[0m
+      ?[31morg.opentest4j.AssertionFailedError: null
+      	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:39)
+      	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:33)
+      	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+      	at com.restful.booker.stepdefinitions.SmokeStepDefinitions.theResponseShouldMatchTheCreatedBookingDetails(SmokeStepDefinitions.java:105)
+      	at âœ½.the response should match the created booking details(file:///C:/Users/VLADIMIR%20IGLESIAS/Desktop/RestfulBooker/src/test/resources/features/smoke/ping_auth_booking_smoke.feature:30)?[0m
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+GET booking id retrieves the created booking(api-smoke-tests;get-booking-id-retrieves-the-created-booking)
+--------------------------------------------------------------------------------
+[Test worker] ERROR  - 
+  _____   ___   ___   _____     ___   ___   ___    ___    ___ 
+ |_   _| | __| / __| |_   _|   | __| | _ \ | _ \  / _ \  | _ \
+   | |   | _|  \__ \   | |     | _|  |   / |   / | (_) | |   /
+   |_|   |___| |___/   |_|     |___| |_|_\ |_|_\  \___/  |_|_\
+
+GET booking id retrieves the created booking
+---------------------------------------------------------------
+[Test worker] ERROR  -     Test failed at step: Then booking details match
+[Test worker] ERROR  -     
+]]></system-err>
+</testsuite>
